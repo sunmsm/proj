@@ -299,4 +299,67 @@ Total 3 (delta 1), reused 0 (delta 0)
 To https://github.com/sunmsm/proj.git
    0ebb648..480c369  MyBranch -> MyBranch
 
+-----------------------------------------------------------------------------------------------
+
+GIT PUSH FILE TO SERVER
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git status
+On branch MyBranch
+Your branch is up-to-date with 'origin/MyBranch'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Git.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git add .
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git status
+On branch MyBranch
+Your branch is up-to-date with 'origin/MyBranch'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   Git.txt
+
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git commit
+[MyBranch 1deee50] GIT file Modified
+ 1 file changed, 55 insertions(+)
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git status
+On branch MyBranch
+Your branch is ahead of 'origin/MyBranch' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git remote
+MyRepo
+origin
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git push MyRepo MyBranch
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 528 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+To https://github.com/sunmsm/proj.git
+   480c369..1deee50  MyBranch -> MyBranch
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git remote -v
+MyRepo  https://github.com/sunmsm/proj.git (fetch)
+MyRepo  https://github.com/sunmsm/proj.git (push)
+origin  https://github.com/sunmsm/proj.git (fetch)
+origin  https://github.com/sunmsm/proj.git (push)
+
 
