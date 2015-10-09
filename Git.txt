@@ -410,5 +410,68 @@ Writing objects: 100% (5/5), 551 bytes | 0 bytes/s, done.
 Total 5 (delta 3), reused 0 (delta 0)
 To https://github.com/sunmsm/proj.git
    50f488a..a8aba83  MyBranch -> MyBranch
+=================================================================================================
+
+FINAL CONCLUSION - PUSH FILES TO STAGING (MyBranch)
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git status
+On branch MyBranch
+Your branch is up-to-date with 'origin/MyBranch'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Git.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git add .
+warning: LF will be replaced by CRLF in Git.txt.
+The file will have its original line endings in your working directory.
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git status
+warning: LF will be replaced by CRLF in Git.txt.
+The file will have its original line endings in your working directory.
+On branch MyBranch
+Your branch is up-to-date with 'origin/MyBranch'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   Git.txt
+
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git remote
+MyRepo
+origin
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git push origin MyBranch
+Everything up-to-date
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git commit
+warning: LF will be replaced by CRLF in Git.txt.
+The file will have its original line endings in your working directory.
+[MyBranch warning: LF will be replaced by CRLF in Git.txt.
+The file will have its original line endings in your working directory.
+5a3f94d] Changes Made...
+warning: LF will be replaced by CRLF in Git.txt.
+The file will have its original line endings in your working directory.
+ 1 file changed, 49 insertions(+)
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git push origin MyBranch
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 809 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+To https://github.com/sunmsm/proj.git
+   a8aba83..5a3f94d  MyBranch -> MyBranch
+
 
 
