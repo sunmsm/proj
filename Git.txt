@@ -574,3 +574,102 @@ Your branch is up-to-date with 'origin/MyBranch'.
 
 sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
 
+-------------------------------------------------------------------------------------------------
+
+Create a file & commit to master Branch
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Master File.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (master)
+$ git add .
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (master)
+$ git commit
+[master b3d98d6] Branch Master
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Master File.txt
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (master)
+$ git remote
+MyRepo
+origin
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 305 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/sunmsm/proj.git
+   962315f..b3d98d6  master -> master
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (master)
+$ ls
+Git.txt  Master File.txt  Welcome.txt
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Git.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (master)
+$ git add .
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (master)
+$ git commit
+[master 995d0a5] Add Git File
+ 1 file changed, 576 insertions(+)
+ create mode 100644 Git.txt
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.72 KiB | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/sunmsm/proj.git
+   b3d98d6..995d0a5  master -> master
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (master)
