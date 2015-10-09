@@ -363,3 +363,52 @@ origin  https://github.com/sunmsm/proj.git (fetch)
 origin  https://github.com/sunmsm/proj.git (push)
 
 ========================================================================
+ERROR RECTIFIED
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git push origin MyBranch
+To https://github.com/sunmsm/proj.git
+ ! [rejected]        MyBranch -> MyBranch (fetch first)
+error: failed to push some refs to 'https://github.com/sunmsm/proj.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git pull
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/sunmsm/proj
+   1d88736..50f488a  MyBranch   -> origin/MyBranch
+Merge made by the 'recursive' strategy.
+ suProject.html | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 suProject.html
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git status
+On branch MyBranch
+Your branch is ahead of 'origin/MyBranch' by 2 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git remote
+MyRepo
+origin
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git push origin MyBranch
+Counting objects: 5, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 551 bytes | 0 bytes/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+To https://github.com/sunmsm/proj.git
+   50f488a..a8aba83  MyBranch -> MyBranch
+
+
