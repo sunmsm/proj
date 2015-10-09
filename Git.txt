@@ -244,4 +244,59 @@ Deleting a local branch:
 sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
 $ git branch -D master
 Deleted branch master (was e97e3ed).
+---------------------------------------------------------------------------------------------------
+GIT PUSH FILE TO SERVER
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git status
+On branch MyBranch
+Your branch is up-to-date with 'origin/MyBranch'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Git.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git add .
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git status
+On branch MyBranch
+Your branch is up-to-date with 'origin/MyBranch'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   Git.txt
+
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git commit
+[MyBranch 480c369] New File Created
+ 1 file changed, 247 insertions(+)
+ create mode 100644 Git.txt
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git status
+On branch MyBranch
+Your branch is ahead of 'origin/MyBranch' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git remote
+MyRepo
+origin
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git push origin MyBranch
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.71 KiB | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://github.com/sunmsm/proj.git
+   0ebb648..480c369  MyBranch -> MyBranch
+
 
