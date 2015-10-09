@@ -1,4 +1,4 @@
-﻿sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
 $ git remote -v
 MyRepo  https://github.com/sunmsm/proj.git (fetch)
 MyRepo  https://github.com/sunmsm/proj.git (push)
@@ -362,4 +362,4 @@ MyRepo  https://github.com/sunmsm/proj.git (push)
 origin  https://github.com/sunmsm/proj.git (fetch)
 origin  https://github.com/sunmsm/proj.git (push)
 
-
+========================================================================
