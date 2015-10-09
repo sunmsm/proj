@@ -473,6 +473,104 @@ Total 3 (delta 2), reused 0 (delta 0)
 To https://github.com/sunmsm/proj.git
    a8aba83..5a3f94d  MyBranch -> MyBranch
 
-----------
-Completion
+------------------------------------------------------------------------------------------
+
+Switch Branch - Files modified in the Folder
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git status
+On branch MyBranch
+Your branch is up-to-date with 'origin/MyBranch'.
+nothing to commit, working directory clean
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ touch logoff.txt
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git status
+On branch MyBranch
+Your branch is up-to-date with 'origin/MyBranch'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        logoff.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git add .
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git status
+On branch MyBranch
+Your branch is up-to-date with 'origin/MyBranch'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   logoff.txt
+
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git commit
+[MyBranch 0dcf2b7] create logoff
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 logoff.txt
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git status
+On branch MyBranch
+Your branch is ahead of 'origin/MyBranch' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git remote
+MyRepo
+origin
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git push origin MyBranch
+fatal: unable to access 'https://github.com/sunmsm/proj.git/': Couldn't resolve host 'github.com'
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git push origin MyBranch
+Counting objects: 2, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 236 bytes | 0 bytes/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+To https://github.com/sunmsm/proj.git
+   7184bfb..0dcf2b7  MyBranch -> MyBranch
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ ls
+__proj/              Git.txt    logoff.txt    suProject.html
+_proj/               gmail-txt  message.txt   Test.txt
+Create New File.txt  Hey.txt    New File.txt  Welcome.txt
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git checkout master
+Branch master set up to track remote branch master from origin.
+Switched to a new branch 'master'
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (master)
+$ ls
+Welcome.txt
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (master)
+$ git checkout MyBranch
+Switched to branch 'MyBranch'
+Your branch is up-to-date with 'origin/MyBranch'.
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (master)
+$ git checkout MyBranch
+Switched to branch 'MyBranch'
+Your branch is up-to-date with 'origin/MyBranch'.
+
+sundar@DN2Sundardesign MINGW32 /e/Sundar/gitDemo/proj (MyBranch)
 
